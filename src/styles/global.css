@@ -57,6 +57,7 @@ nav ul a:hover { color: var(--ink); }
 section { border-top: 1px solid var(--line); padding-block: 80px; }
 .bar-title { padding-block: 28px; text-align: center; }
 .bar-title h2 { font-size: clamp(22px, 4vw, 36px); }
+.bar-title + section { border-top: 0; }
 .head { display: grid; gap: 14px; margin-bottom: 44px; }
 .head p { color: var(--muted); }
 
