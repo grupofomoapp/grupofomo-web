@@ -90,7 +90,7 @@ section { border-top: 1px solid var(--line); padding-block: 80px; }
   .photo { aspect-ratio: 4 / 3; }
 }
 
-.marcas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.marcas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 32px; }
 .marca { display: grid; gap: 12px; align-content: start; }
 .marca .photo { aspect-ratio: 1 / 1; }
 .marca p { color: var(--muted); }

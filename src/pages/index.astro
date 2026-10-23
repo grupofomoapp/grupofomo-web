@@ -68,8 +68,10 @@ import { club, fiestas, graduacions, marcas } from '../data/eventos';
         {marcas.map((m) => (
           <div class="marca" id={m.id}>
             <div class="photo logo-panel"><img src={m.logo} alt={m.nombre} loading="lazy"></div>
+            <div class="meta">{m.meta.map((t) => <span>{t}</span>)}</div>
             <h3>{m.nombre}</h3>
-            {m.texto && <p>{m.texto}</p>}
+            <p>{m.texto}</p>
+            <a class="btn" href={m.facebook} target="_blank" rel="noopener">Facebook</a>
           </div>
         ))}
       </div>

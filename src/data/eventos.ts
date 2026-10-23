@@ -88,17 +88,55 @@ export const graduacions: Evento = {
   web: 'https://www.graduacions.cat/',
 };
 
-// Otras marcas de Grupo FOMO: solo logo y descripción, sin página propia.
+// Otras marcas de Grupo FOMO (ya finalizadas): logo, años, descripción y Facebook, sin página propia.
 export interface Marca {
   id: string;
   nombre: string;
   logo: string;
+  meta: string[];
   texto: string;
+  facebook: string;
 }
 
 export const marcas: Marca[] = [
-  { id: 'la-previa', nombre: 'La Previa', logo: '/img/logos/la-previa.png', texto: '' },
-  { id: 'la-burrada', nombre: 'La Burrada', logo: '/img/logos/la-burrada.png', texto: '' },
-  { id: 'la-resaca', nombre: 'La Resaca', logo: '/img/logos/la-resaca.png', texto: '' },
-  { id: 'fomo', nombre: 'FOMO', logo: '/img/logos/fomo.png', texto: '' },
+  {
+    id: 'la-previa',
+    nombre: 'La Previa',
+    logo: '/img/logos/la-previa.png',
+    meta: ['2018–2022'],
+    texto: 'Primeras copas con música en SOHO, Bubblic Bar y Patrón.',
+    facebook: 'https://www.facebook.com/lapreviabarcelona',
+  },
+  {
+    id: 'la-burrada',
+    nombre: 'La Burrada',
+    logo: '/img/logos/la-burrada.png',
+    meta: ['2021–2025'],
+    texto: 'Fiestas universitarias en Input, Otto y Malalts de Festa.',
+    facebook: 'https://www.facebook.com/profile.php?id=61574677543987',
+  },
+  {
+    id: 'la-resaca',
+    nombre: 'La Resaca',
+    logo: '/img/logos/la-resaca.png',
+    meta: ['2018–2023', 'Barcelona', 'Costa Brava'],
+    texto: "Tardeos de domingo en Café del Mar Barcelona, Pacha Barcelona y Papillon Platja d'Aro.",
+    facebook: 'https://www.facebook.com/laresacacostabrava',
+  },
+  {
+    id: 'fomo-by-sutton',
+    nombre: 'FOMO by Sutton',
+    logo: '/img/logos/fomo.png',
+    meta: ['2022–2024'],
+    texto: 'Fiestas de los jueves en Sutton Barcelona.',
+    facebook: 'https://www.facebook.com/fomobysutton',
+  },
+  {
+    id: 'pacha-cha',
+    nombre: 'Pacha Chá',
+    logo: '/img/logos/pacha-cha.png',
+    meta: ['2018–2019'],
+    texto: 'Fiestas universitarias de los jueves en Pacha Barcelona.',
+    facebook: 'https://www.facebook.com/pachachabarcelona',
+  },
 ];
