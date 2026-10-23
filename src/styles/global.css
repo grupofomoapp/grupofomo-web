@@ -33,10 +33,9 @@ p { margin: 0; max-width: 60ch; }
 .band-light { --bg: #fffeff; --ink: #050505; --muted: #5c5c60; --line: #dcdcdf; background: var(--bg); color: var(--ink); }
 
 /* Barra superior y cabecera */
-.ticker { text-align: center; padding-block: 8px; font-weight: 800; font-stretch: 125%; font-size: 12px; letter-spacing: .2em; }
 .topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
 nav { background: var(--bg); border-bottom: 1px solid var(--line); }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: #050505; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: #fffeff; }
 nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; }
 .mark { display: block; width: 92px; color: var(--ink); }
 .mark svg { display: block; width: 100%; height: auto; }
@@ -54,7 +53,6 @@ nav ul a:hover { color: var(--ink); }
 section { border-top: 1px solid var(--line); padding-block: 80px; }
 .bar-title { padding-block: 28px; text-align: center; }
 .bar-title h2 { font-size: clamp(22px, 4vw, 36px); }
-.bar-title + section { border-top: 0; }
 .head { display: grid; gap: 14px; margin-bottom: 44px; }
 .head p { color: var(--muted); }
 
