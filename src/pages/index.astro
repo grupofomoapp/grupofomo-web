@@ -78,7 +78,7 @@ import { club, fiestas, graduacions, marcas } from '../data/eventos';
           <div class="marca" id={m.id}>
             <div class="photo logo-panel"><img src={m.logo} alt={m.nombre} loading="lazy"></div>
             <h3>{m.nombre}</h3>
-            <p>{m.texto}</p>
+            {m.texto && <p>{m.texto}</p>}
           </div>
         ))}
       </div>

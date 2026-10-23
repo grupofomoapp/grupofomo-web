@@ -97,8 +97,8 @@ export interface Marca {
 }
 
 export const marcas: Marca[] = [
-  { id: 'la-previa', nombre: 'La Previa', logo: '/img/logos/la-previa.png', texto: 'Descripción pendiente.' },
-  { id: 'la-burrada', nombre: 'La Burrada', logo: '/img/logos/la-burrada.png', texto: 'Descripción pendiente.' },
-  { id: 'la-resaca', nombre: 'La Resaca', logo: '/img/logos/la-resaca.png', texto: 'Descripción pendiente.' },
-  { id: 'fomo', nombre: 'FOMO', logo: '/img/logos/fomo.png', texto: 'Descripción pendiente.' },
+  { id: 'la-previa', nombre: 'La Previa', logo: '/img/logos/la-previa.png', texto: '' },
+  { id: 'la-burrada', nombre: 'La Burrada', logo: '/img/logos/la-burrada.png', texto: '' },
+  { id: 'la-resaca', nombre: 'La Resaca', logo: '/img/logos/la-resaca.png', texto: '' },
+  { id: 'fomo', nombre: 'FOMO', logo: '/img/logos/fomo.png', texto: '' },
 ];
