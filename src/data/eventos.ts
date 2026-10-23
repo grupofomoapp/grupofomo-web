@@ -153,6 +153,13 @@ export const marcas: Marca[] = [
     texto: 'Fiestas universitarias de los jueves en Pacha Barcelona.',
     facebook: 'https://www.facebook.com/pachachabarcelona',
   },
+  {
+    id: 'music-club',
+    nombre: 'Music Club',
+    logo: '/img/logos/music-club.png',
+    meta: ['+16', 'Barcelona'],
+    texto: 'Gestión de una sala con fiestas para mayores de 16 años en la calle Villarroel de Barcelona.',
+  },
 ];
 
 // Años de experiencia: desde el año más antiguo que aparece en las tarjetitas de la web
