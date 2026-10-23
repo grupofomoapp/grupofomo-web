@@ -112,7 +112,7 @@ export const marcas: Marca[] = [
     id: 'la-burrada',
     nombre: 'La Burrada',
     logo: '/img/logos/la-burrada.png',
-    meta: ['2021–2025'],
+    meta: ['2021–2025', 'Barcelona'],
     texto: 'Fiestas universitarias en Input, Otto y Malalts de Festa.',
     facebook: 'https://www.facebook.com/profile.php?id=61574677543987',
   },
