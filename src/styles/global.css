@@ -34,8 +34,9 @@ p { margin: 0; max-width: 60ch; }
 
 /* Barra superior y cabecera */
 .ticker { text-align: center; padding-block: 8px; font-weight: 800; font-stretch: 125%; font-size: 12px; letter-spacing: .2em; }
-nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
+nav { background: var(--bg); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: #050505; }
 nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; }
 .mark { display: block; width: 92px; color: var(--ink); }
 .mark svg { display: block; width: 100%; height: auto; }
