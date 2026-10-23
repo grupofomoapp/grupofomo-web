@@ -53,18 +53,18 @@ import { club, fiestas, graduacions, marcas } from '../data/eventos';
   <section>
     <div class="wrap">
       <div class="head">
-        <span class="label">Nuestras fiestas</span>
+        <span class="label">Gestión de local</span>
       </div>
-      {fiestas.map((f, i) => <EventoFeature evento={f} izquierda={i % 2 === 0} />)}
+      <EventoFeature evento={club} izquierda />
     </div>
   </section>
 
   <section>
     <div class="wrap">
       <div class="head">
-        <span class="label">Gestión de local</span>
+        <span class="label">Nuestras fiestas</span>
       </div>
-      <EventoFeature evento={club} izquierda={fiestas.length % 2 === 0} />
+      {fiestas.map((f, i) => <EventoFeature evento={f} izquierda={i % 2 === 1} />)}
     </div>
   </section>
 
