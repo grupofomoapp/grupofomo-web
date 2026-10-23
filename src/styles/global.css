@@ -45,8 +45,12 @@ nav ul a:hover { color: var(--ink); }
 @media (max-width: 720px) { nav ul { display: none; } }
 
 /* Hero */
-.hero { padding-block: 88px 80px; display: grid; gap: 28px; }
-.hero h1 { font-weight: 900; font-size: clamp(44px, 10vw, 120px); line-height: .9; letter-spacing: -.02em; }
+.hero { padding-block: 88px 80px; display: grid; gap: 28px; container-type: inline-size; }
+.hero h1 { font-weight: 900; line-height: .9; letter-spacing: -.02em; }
+/* Cada línea del titular ocupa todo el ancho: tamaños medidos para Archivo 900 al 125%. */
+.hero h1 span { display: block; white-space: nowrap; }
+.hero h1 span:first-child { font-size: 17.7cqi; }
+.hero h1 span:last-child { font-size: 11.3cqi; }
 .hero p { font-size: clamp(18px, 2.2vw, 22px); color: var(--muted); }
 .hero p b { color: var(--ink); font-weight: 600; }
 
