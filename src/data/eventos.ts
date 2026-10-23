@@ -43,19 +43,6 @@ export const fiestas: Evento[] = [
     mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5986.166275589334!2d2.1359119510682105!3d41.39400083090339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499b8b55bda5d%3A0x587bf7230e3f72a4!2sEl%20Cuatro%20Barcelona!5e0!3m2!1ses!2ses!4v1762820180600!5m2!1ses!2ses',
   },
   {
-    id: 'noche-tonta',
-    slug: 'una-noche-tonta',
-    nombre: 'Una Noche Tonta',
-    texto: 'La fiesta para mayores de 16 años, en Barcelona, la Cerdanya y la Costa Brava.',
-    descripcion: 'Desde sus inicios en 2016 se ha convertido en la fiesta de referencia para mayores de 16 años en Barcelona, la Cerdanya y la Costa Brava.',
-    foto: '/img/una-noche-tonta.webp',
-    logo: '/img/logos/una-noche-tonta.png',
-    meta: ['Desde 2016', '+16', 'Barcelona · Cerdanya · Costa Brava'],
-    entradas: 'https://www.fourvenues.com/una-noche-tonta',
-    lugar: 'Bikini Barcelona',
-    mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.2708572838587!2d2.1319055895364665!3d41.389923821846416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4987ac063df73%3A0xca99954414d8c7fd!2sBikini%20Barcelona!5e0!3m2!1ses!2ses!4v1762820620222!5m2!1ses!2ses',
-  },
-  {
     id: 'tarde-tonta',
     slug: 'una-tarde-tonta',
     nombre: 'Una Tarde Tonta',
@@ -68,9 +55,22 @@ export const fiestas: Evento[] = [
     lugar: 'La Fira Villarroel Barcelona',
     mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.1653564332037!2d2.145250376439959!3d41.3922151956951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a29cdc055f8b%3A0x2570c09032bc0e8a!2sLa%20Fira%20Villarroel%20Barcelona!5e0!3m2!1ses!2ses!4v1762820967303!5m2!1ses!2ses',
   },
+  {
+    id: 'noche-tonta',
+    slug: 'una-noche-tonta',
+    nombre: 'Una Noche Tonta',
+    texto: 'La fiesta para mayores de 16 años, en Barcelona, la Cerdanya y la Costa Brava.',
+    descripcion: 'Desde sus inicios en 2016 se ha convertido en la fiesta de referencia para mayores de 16 años en Barcelona, la Cerdanya y la Costa Brava.',
+    foto: '/img/una-noche-tonta.webp',
+    logo: '/img/logos/una-noche-tonta.png',
+    meta: ['Desde 2016', '+16', 'Barcelona · Cerdanya · Costa Brava'],
+    entradas: 'https://www.fourvenues.com/una-noche-tonta',
+    lugar: 'Bikini Barcelona',
+    mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.2708572838587!2d2.1319055895364665!3d41.389923821846416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4987ac063df73%3A0xca99954414d8c7fd!2sBikini%20Barcelona!5e0!3m2!1ses!2ses!4v1762820620222!5m2!1ses!2ses',
+  },
 ];
 
-export const eventos: Evento[] = [club, ...fiestas];
+export const eventos: Evento[] = [...fiestas, club];
 
 // Otros proyectos de Grupo FOMO con web propia (sin página aquí).
 export const graduacions: Evento = {
@@ -87,3 +87,18 @@ export const graduacions: Evento = {
   mapa: '',
   web: 'https://www.graduacions.cat/',
 };
+
+// Otras marcas de Grupo FOMO: solo logo y descripción, sin página propia.
+export interface Marca {
+  id: string;
+  nombre: string;
+  logo: string;
+  texto: string;
+}
+
+export const marcas: Marca[] = [
+  { id: 'la-previa', nombre: 'La Previa', logo: '/img/logos/la-previa.png', texto: '' },
+  { id: 'la-burrada', nombre: 'La Burrada', logo: '/img/logos/la-burrada.png', texto: '' },
+  { id: 'la-resaca', nombre: 'La Resaca', logo: '/img/logos/la-resaca.png', texto: '' },
+  { id: 'fomo', nombre: 'FOMO', logo: '/img/logos/fomo.png', texto: '' },
+];
