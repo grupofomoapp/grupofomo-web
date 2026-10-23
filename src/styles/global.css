@@ -28,8 +28,12 @@ p { margin: 0; max-width: 60ch; }
 .btn { display: inline-block; width: fit-content; padding: 13px 22px; border: 1.5px solid var(--ink); font-weight: 800; font-stretch: 125%; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; }
 .btn:hover { background: var(--ink); color: var(--bg); }
 
+/* Bandas de color fijo (no cambian con el modo claro u oscuro) */
+.band-dark { --bg: #050505; --ink: #fffeff; --muted: #a3a3a6; --line: #2a2a2c; background: var(--bg); color: var(--ink); }
+.band-light { --bg: #fffeff; --ink: #050505; --muted: #5c5c60; --line: #dcdcdf; background: var(--bg); color: var(--ink); }
+
 /* Barra superior y cabecera */
-.ticker { border-bottom: 1px solid var(--line); text-align: center; padding-block: 8px; font-weight: 800; font-stretch: 125%; font-size: 12px; letter-spacing: .2em; }
+.ticker { text-align: center; padding-block: 8px; font-weight: 800; font-stretch: 125%; font-size: 12px; letter-spacing: .2em; }
 nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; }
