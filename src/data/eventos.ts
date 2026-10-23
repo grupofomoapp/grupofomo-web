@@ -7,6 +7,7 @@ export interface Evento {
   texto: string;
   descripcion: string;
   foto: string;
+  logo: string;
   meta?: string[];
   entradas: string;
   lugar: string;
@@ -21,6 +22,7 @@ export const club: Evento = {
   texto: 'Pasada la medianoche, el restaurante Mirablau se convierte en un club con las mejores vistas de la ciudad.',
   descripcion: 'Mirablau, el restaurante mítico de Barcelona, se convierte a partir de medianoche en un club con las mejores vistas de la ciudad.',
   foto: '/img/mirablau-club.webp',
+  logo: '/img/logos/mirablau-club.png',
   entradas: 'https://www.fourvenues.com/mirablau-club',
   lugar: 'Mirablau',
   mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.0677574014403!2d2.1293091764409!3d41.41604779421637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4981b8e7d21db%3A0x906895d755a11f40!2sMirablau!5e0!3m2!1ses!2ses!4v1762817787585!5m2!1ses!2ses',
@@ -34,6 +36,7 @@ export const fiestas: Evento[] = [
     texto: 'Traemos a los mejores artistas de rumba en eventos donde se juntan música, copas y buen rollo.',
     descripcion: 'Desde 2022 traemos a los artistas de rumba más reconocidos de la ciudad. Pop español, rumba y flamenco fusión en cada evento, con copas y buen rollo.',
     foto: '/img/la-rumba.webp',
+    logo: '/img/logos/la-rumba.png',
     meta: ['Desde 2022', 'Barcelona'],
     entradas: 'https://www.fourvenues.com/la-rumba-barcelona',
     lugar: 'El Cuatro Barcelona',
@@ -46,6 +49,7 @@ export const fiestas: Evento[] = [
     texto: 'La fiesta para mayores de 16 años, en Barcelona, la Cerdanya y la Costa Brava.',
     descripcion: 'Desde sus inicios en 2016 se ha convertido en la fiesta de referencia para mayores de 16 años en Barcelona, la Cerdanya y la Costa Brava.',
     foto: '/img/una-noche-tonta.webp',
+    logo: '/img/logos/una-noche-tonta.png',
     meta: ['Desde 2016', '+16', 'Barcelona · Cerdanya · Costa Brava'],
     entradas: 'https://www.fourvenues.com/una-noche-tonta',
     lugar: 'Bikini Barcelona',
@@ -58,6 +62,7 @@ export const fiestas: Evento[] = [
     texto: 'La fiesta de tarde para mayores de 14 años. La única de su tipo en Barcelona.',
     descripcion: 'Desde 2024 llevamos el ocio al público más joven con una fiesta de tarde para mayores de 14 años, la única de este tipo en Barcelona.',
     foto: '/img/una-tarde-tonta.webp',
+    logo: '/img/logos/una-tarde-tonta.png',
     meta: ['Desde 2024', '+14', 'Barcelona'],
     entradas: 'https://www.fourvenues.com/una-tarde-tonta',
     lugar: 'La Fira Villarroel Barcelona',
@@ -75,6 +80,7 @@ export const graduacions: Evento = {
   texto: 'Organizamos fiestas de graduación para estudiantes de ESO, Bachillerato y universidad en Barcelona, Girona, Lleida y Tarragona: cena, fiesta, DJ, fotografía y aftermovie.',
   descripcion: '',
   foto: '/img/graduacions.webp',
+  logo: '/img/logos/graduacions.svg',
   meta: ['+8 años', '+100 graduaciones', 'Cataluña'],
   entradas: '',
   lugar: '',
