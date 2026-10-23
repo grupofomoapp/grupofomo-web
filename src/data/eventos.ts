@@ -96,10 +96,17 @@ export interface Marca {
   logo: string;
   meta: string[];
   texto: string;
-  facebook: string;
+  facebook?: string;
 }
 
 export const marcas: Marca[] = [
+  {
+    id: 'vetro',
+    nombre: 'Vetro',
+    logo: '/img/logos/vetro.png',
+    meta: ['2012', 'Barcelona'],
+    texto: 'Promoción de los eventos de la mítica sala Vetro de Barcelona.',
+  },
   {
     id: 'la-previa',
     nombre: 'La Previa',

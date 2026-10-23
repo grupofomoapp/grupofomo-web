@@ -71,7 +71,7 @@ import { anyosExperiencia, club, fiestas, graduacions, marcas } from '../data/ev
             <div class="meta">{m.meta.map((t) => <span>{t}</span>)}</div>
             <h3>{m.nombre}</h3>
             <p>{m.texto}</p>
-            <a class="btn" href={m.facebook} target="_blank" rel="noopener">Facebook</a>
+            {m.facebook && <a class="btn" href={m.facebook} target="_blank" rel="noopener">Facebook</a>}
           </div>
         ))}
       </div>
