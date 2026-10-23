@@ -4,13 +4,15 @@ import type { Evento } from '../data/eventos';
 interface Props {
   evento: Evento;
   izquierda?: boolean;
+  etiqueta?: string;
 }
 
-const { evento, izquierda = false } = Astro.props;
+const { evento, izquierda = false, etiqueta } = Astro.props;
 ---
 <div class:list={["feature", { izquierda }]} id={evento.id}>
   <div class="photo logo-panel band-dark"><img src={evento.logo} alt={evento.nombre} loading="lazy"></div>
   <div class="text">
+    {etiqueta && <span class="label">{etiqueta}</span>}
     {evento.meta && <div class="meta">{evento.meta.map((m) => <span>{m}</span>)}</div>}
     <h3>{evento.nombre}</h3>
     <p>{evento.texto}</p>
