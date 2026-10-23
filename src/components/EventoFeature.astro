@@ -1,0 +1,18 @@
+---
+import type { Evento } from '../data/eventos';
+
+interface Props {
+  evento: Evento;
+}
+
+const { evento } = Astro.props;
+---
+<div class="feature" id={evento.id}>
+  <img class="photo" src={evento.foto} alt={evento.nombre} loading="lazy">
+  <div class="text">
+    {evento.meta && <div class="meta">{evento.meta.map((m) => <span>{m}</span>)}</div>}
+    <h3>{evento.nombre}</h3>
+    <p>{evento.texto}</p>
+    <a class="btn" href={evento.enlace}>Info + eventos</a>
+  </div>
+</div>
