@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import EventoFeature from '../components/EventoFeature.astro';
 import Newsletter from '../components/Newsletter.astro';
-import { club, fiestas, graduacions } from '../data/eventos';
+import { club, fiestas, graduacions, marcas } from '../data/eventos';
 ---
 <Base>
   <div class="band-dark">
@@ -53,7 +53,7 @@ import { club, fiestas, graduacions } from '../data/eventos';
   <section>
     <div class="wrap">
       <div class="head">
-        <span class="label">Nuestro club</span>
+        <span class="label">Gestión de local</span>
       </div>
       <EventoFeature evento={club} />
     </div>
@@ -65,6 +65,23 @@ import { club, fiestas, graduacions } from '../data/eventos';
         <span class="label">Nuestras fiestas</span>
       </div>
       {fiestas.map((f) => <EventoFeature evento={f} />)}
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Más marcas</span>
+      </div>
+      <div class="marcas">
+        {marcas.map((m) => (
+          <div class="marca" id={m.id}>
+            <div class="photo logo-panel"><img src={m.logo} alt={m.nombre} loading="lazy"></div>
+            <h3>{m.nombre}</h3>
+            <p>{m.texto}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 

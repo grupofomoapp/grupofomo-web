@@ -73,14 +73,21 @@ section { border-top: 1px solid var(--line); padding-block: 80px; }
 .feature .text p { color: var(--muted); }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; }
 .meta span { border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; font-size: 12px; font-weight: 600; font-stretch: 125%; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.photo.logo-panel { display: grid; place-items: center; background: #050505; }
-.logo-panel img { width: 62%; max-height: 50%; object-fit: contain; }
+.photo.logo-panel { position: relative; background: #050505; }
+.logo-panel img { position: absolute; inset: 0; margin: auto; width: 62%; height: 55%; object-fit: contain; }
 .photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; max-width: 100%; object-fit: cover; background: var(--photo); }
 @media (max-width: 760px) {
   .feature { grid-template-columns: 1fr; gap: 24px; }
   .feature:nth-of-type(even) .photo { order: 0; }
   .photo { aspect-ratio: 4 / 3; }
-  .logo-panel img { max-height: 45%; }
+}
+
+.marcas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.marca { display: grid; gap: 12px; align-content: start; }
+.marca .photo { aspect-ratio: 1 / 1; }
+.marca p { color: var(--muted); }
+@media (max-width: 760px) {
+  .marcas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 }
 
 /* Newsletter */
