@@ -70,7 +70,7 @@ export const fiestas: Evento[] = [
   },
 ];
 
-export const eventos: Evento[] = [club, ...fiestas];
+export const eventos: Evento[] = [...fiestas, club];
 
 // Otros proyectos de Grupo FOMO con web propia (sin página aquí).
 export const graduacions: Evento = {
