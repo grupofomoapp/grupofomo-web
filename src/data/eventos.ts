@@ -19,7 +19,7 @@ export const club: Evento = {
   id: 'mirablau',
   slug: 'mirablau-club',
   nombre: 'Mirablau Club',
-  texto: 'Noches de club con las mejores vistas de Barcelona en el restaurante Mirablau, a partir de medianoche.',
+  texto: 'Puesta en marcha y gestión del club del restaurante Mirablau, con las mejores vistas de Barcelona a partir de medianoche.',
   descripcion: 'Mirablau, el restaurante mítico de Barcelona, se convierte a partir de medianoche en un club con las mejores vistas de la ciudad.',
   foto: '/img/mirablau-club.webp',
   logo: '/img/logos/mirablau-club.png',
