@@ -99,7 +99,7 @@ export interface Marca {
   facebook?: string;
 }
 
-export const marcas: Marca[] = [
+const listaMarcas: Marca[] = [
   {
     id: 'music-club',
     nombre: 'Music Club',
@@ -169,6 +169,14 @@ export const marcas: Marca[] = [
     facebook: 'https://www.facebook.com/pachachabarcelona',
   },
 ];
+
+// Ordenadas por fecha: primero el año de inicio y, si coincide, el de fin
+const anyosDe = (m: Marca) => (m.meta.join(' ').match(/\b(?:19|20)\d{2}\b/g) ?? ['9999']).map(Number);
+export const marcas = [...listaMarcas].sort((a, b) => {
+  const [ia, fa = ia] = anyosDe(a);
+  const [ib, fb = ib] = anyosDe(b);
+  return ia - ib || fa - fb;
+});
 
 // Años de experiencia: desde el año más antiguo que aparece en las tarjetitas de la web
 // (fiestas, club, graduaciones y marcas). Se recalcula en cada publicación.
