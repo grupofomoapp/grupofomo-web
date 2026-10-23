@@ -108,6 +108,13 @@ export const marcas: Marca[] = [
     texto: 'Gestión de una sala con fiestas para mayores de 16 años en la calle Villarroel de Barcelona.',
   },
   {
+    id: 'seven-crowns',
+    nombre: 'Seven Crowns',
+    logo: '/img/logos/seven-crowns.png',
+    meta: ['2010', '+16', 'Barcelona'],
+    texto: 'Fiestas para mayores de 16 años en la sala Seven Crowns de Barcelona.',
+  },
+  {
     id: 'vetro',
     nombre: 'Vetro',
     logo: '/img/logos/vetro.png',
