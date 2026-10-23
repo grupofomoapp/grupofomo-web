@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import EventoFeature from '../components/EventoFeature.astro';
 import Newsletter from '../components/Newsletter.astro';
-import { club, fiestas, graduacions, marcas } from '../data/eventos';
+import { anyosExperiencia, club, fiestas, graduacions, marcas } from '../data/eventos';
 ---
 <Base>
   <div class="band-dark">
@@ -16,7 +16,7 @@ import { club, fiestas, graduacions, marcas } from '../data/eventos';
     <div class="wrap">
       <div class="head">
         <span class="label">Nuestros servicios</span>
-        <h2>Más de 15 años en la organización de eventos</h2>
+        <h2>Más de {anyosExperiencia} años en la organización de eventos</h2>
         <p>Ponemos toda esa experiencia al servicio de salas, marcas y particulares.</p>
       </div>
       <div class="services">

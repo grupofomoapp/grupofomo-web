@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Logo from '../components/Logo.astro';
-import { eventos } from '../data/eventos';
+import { anyosExperiencia, eventos } from '../data/eventos';
 
 interface Props {
   title?: string;
@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title = 'Grupo FOMO',
-  description = 'GRUPO FOMO: Mirablau Club, La Rumba Barcelona, Una Noche Tonta y Una Tarde Tonta. Más de 15 años en la organización de eventos en Barcelona.',
+  description = `GRUPO FOMO: Mirablau Club, La Rumba Barcelona, Una Noche Tonta y Una Tarde Tonta. Más de ${anyosExperiencia} años en la organización de eventos en Barcelona.`,
 } = Astro.props;
 ---
 <!doctype html>

@@ -19,7 +19,7 @@ export const club: Evento = {
   id: 'mirablau',
   slug: 'mirablau-club',
   nombre: 'Mirablau Club',
-  texto: 'Puesta en marcha y gestión del club del restaurante Mirablau, con las mejores vistas de Barcelona a partir de medianoche.',
+  texto: 'Puesta en marcha y gestión del club del restaurante Mirablau: redes sociales, comunicación y ticketing.',
   descripcion: 'Mirablau, el restaurante mítico de Barcelona, se convierte a partir de medianoche en un club con las mejores vistas de la ciudad.',
   foto: '/img/mirablau-club.webp',
   logo: '/img/logos/mirablau-club.png',
@@ -141,3 +141,12 @@ export const marcas: Marca[] = [
     facebook: 'https://www.facebook.com/pachachabarcelona',
   },
 ];
+
+// Años de experiencia: desde el año más antiguo que aparece en las tarjetitas de la web
+// (fiestas, club, graduaciones y marcas). Se recalcula en cada publicación.
+const anyos = [...eventos, graduacions, ...marcas]
+  .flatMap((e) => e.meta ?? [])
+  .flatMap((t) => t.match(/\b(?:19|20)\d{2}\b/g) ?? [])
+  .map(Number);
+export const primerAnyo = Math.min(...anyos);
+export const anyosExperiencia = new Date().getFullYear() - primerAnyo;
