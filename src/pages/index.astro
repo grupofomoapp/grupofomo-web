@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import EventoFeature from '../components/EventoFeature.astro';
+import { club, fiestas } from '../data/eventos';
+---
+<Base>
+  <header class="wrap hero">
+    <h1>Fear of missing out</h1>
+    <p>El <b>FOMO</b> es esa chispa que te hace querer estar en <b>el lugar correcto</b>, en el momento justo. Es el miedo a perderte los mejores eventos.</p>
+  </header>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Nuestros servicios</span>
+        <h2>Más de 15 años en la organización de eventos</h2>
+        <p>Ponemos toda esa experiencia al servicio de salas, marcas y particulares.</p>
+      </div>
+      <div class="services">
+        <article>
+          <h3>Gestión de locales</h3>
+          <p>Ayudamos a las salas a optimizar su gestión, hacer crecer sus redes sociales y aumentar su facturación.</p>
+        </article>
+        <article>
+          <h3>Organización de fiestas</h3>
+          <p>Creamos y gestionamos marcas de fiesta, cada una con su propia identidad.</p>
+        </article>
+        <article>
+          <h3>Eventos privados</h3>
+          <p>Conseguimos los mejores espacios de Barcelona para eventos privados de cualquier tipo.</p>
+        </article>
+      </div>
+      <a class="btn" href="mailto:grupofomo@gmail.com">Solicitar más información</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Nuestro club</span>
+      </div>
+      <EventoFeature evento={club} />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Nuestras fiestas</span>
+      </div>
+      {fiestas.map((f) => <EventoFeature evento={f} />)}
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap news">
+      <h2>Entérate antes que nadie</h2>
+      <p class="intro">Déjanos tu email y te avisamos de las próximas fiestas.</p>
+      <form id="news">
+        <label class="label" for="email" hidden>Correo electrónico</label>
+        <input id="email" type="email" placeholder="Correo electrónico" required autocomplete="email">
+        <button type="submit">Suscribirme</button>
+      </form>
+      <p class="note" id="note" aria-live="polite"></p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // TODO: conectar a un servicio de newsletter (Shopify, Mailchimp o Brevo).
+  document.getElementById('news')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = document.getElementById('note');
+    if (note) note.textContent = 'Pronto podrás suscribirte desde aquí.';
+  });
+</script>
