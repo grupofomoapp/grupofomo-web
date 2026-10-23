@@ -94,6 +94,8 @@ section { border-top: 1px solid var(--line); padding-block: 80px; }
 .marca { display: grid; gap: 12px; align-content: start; }
 .marca .photo { aspect-ratio: 1 / 1; }
 .marca p { color: var(--muted); }
+/* Marca sin logo: su nombre en blanco dentro del cuadrado. */
+.logo-texto { position: absolute; inset: 0; display: grid; place-items: center; padding: 18%; color: #fffeff; font-weight: 900; font-stretch: 125%; font-size: clamp(20px, 2.6vw, 34px); line-height: 1; text-align: center; text-transform: uppercase; }
 @media (max-width: 760px) {
   .marcas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 }

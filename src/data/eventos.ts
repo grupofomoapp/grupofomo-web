@@ -93,7 +93,7 @@ export const graduacions: Evento = {
 export interface Marca {
   id: string;
   nombre: string;
-  logo: string;
+  logo?: string;
   meta: string[];
   texto: string;
   facebook?: string;
@@ -106,6 +106,12 @@ export const marcas: Marca[] = [
     logo: '/img/logos/vetro.png',
     meta: ['2012', 'Barcelona'],
     texto: 'Promoción de los eventos de la mítica sala Vetro de Barcelona.',
+  },
+  {
+    id: 'el-cielo',
+    nombre: 'El Cielo de Up&Down',
+    meta: ['2012', '+16', 'Barcelona'],
+    texto: 'Fiestas para mayores de 16 años en Up&Down Barcelona.',
   },
   {
     id: 'la-previa',
