@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Logo from '../components/Logo.astro';
-import { club, fiestas } from '../data/eventos';
+import { eventos } from '../data/eventos';
 
 interface Props {
   title?: string;
@@ -32,7 +32,7 @@ const {
   <div class="wrap">
     <a class="mark" href="/" aria-label="GRUPO FOMO, inicio"><Logo /></a>
     <ul>
-      {[club, ...fiestas].map((e) => <li><a href={`/#${e.id}`}>{e.id === 'la-rumba' ? 'La Rumba' : e.nombre}</a></li>)}
+      {eventos.map((e) => <li><a href={`/${e.slug}`}>{e.id === 'la-rumba' ? 'La Rumba' : e.nombre}</a></li>)}
       <li><a href="/#servicios">Eventos privados</a></li>
     </ul>
   </div>

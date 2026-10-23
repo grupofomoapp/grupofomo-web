@@ -1,0 +1,21 @@
+<section>
+  <div class="wrap news">
+    <h2>Entérate antes que nadie</h2>
+    <p class="intro">Déjanos tu email y te avisamos de las próximas fiestas.</p>
+    <form id="news">
+      <label class="label" for="email" hidden>Correo electrónico</label>
+      <input id="email" type="email" placeholder="Correo electrónico" required autocomplete="email">
+      <button type="submit">Suscribirme</button>
+    </form>
+    <p class="note" id="note" aria-live="polite"></p>
+  </div>
+</section>
+
+<script>
+  // TODO: conectar a un servicio de newsletter (Shopify, Mailchimp o Brevo).
+  document.getElementById('news')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = document.getElementById('note');
+    if (note) note.textContent = 'Pronto podrás suscribirte desde aquí.';
+  });
+</script>

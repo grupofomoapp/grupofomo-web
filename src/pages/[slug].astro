@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { eventos, type Evento } from '../data/eventos';
+
+export function getStaticPaths() {
+  return eventos.map((evento) => ({ params: { slug: evento.slug }, props: { evento } }));
+}
+
+interface Props {
+  evento: Evento;
+}
+
+const { evento } = Astro.props;
+---
+<Base title={`${evento.nombre} · Grupo FOMO`} description={evento.descripcion}>
+  <header class="wrap detail">
+    <a class="back" href="/">← Volver</a>
+    <div class="feature">
+      <img class="photo" src={evento.foto} alt={evento.nombre}>
+      <div class="text">
+        {evento.meta && <div class="meta">{evento.meta.map((m) => <span>{m}</span>)}</div>}
+        <h1>{evento.nombre}</h1>
+        <p>{evento.descripcion}</p>
+        <a class="btn solid" href={evento.entradas}>Entradas</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Próximos eventos</span>
+        <h2>{evento.lugar}</h2>
+        <p>Consulta las próximas fechas y compra tus entradas en <a href={evento.entradas}>Fourvenues</a>.</p>
+      </div>
+      <iframe class="map" src={evento.mapa} title={`Mapa: ${evento.lugar}`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <Newsletter />
+</Base>
