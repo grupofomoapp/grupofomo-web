@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr merge:*)",
+      "Bash(gh api -X PUT repos/grupofomoapp/grupofomo-web/pulls/*/merge:*)",
+      "mcp__github__merge_pull_request"
+    ]
+  }
+}
