@@ -68,17 +68,22 @@ section { border-top: 1px solid var(--line); padding-block: 80px; }
 /* Club y fiestas */
 .feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
 .feature + .feature { margin-top: 72px; }
-.feature:nth-of-type(even) .photo { order: 2; }
+.feature .photo { order: 2; }
+.feature.izquierda .photo { order: 0; }
+.feature.izquierda .text { text-align: right; justify-items: end; }
+.feature.izquierda .meta { justify-content: flex-end; }
 .feature .text { display: grid; gap: 16px; }
 .feature .text p { color: var(--muted); }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; }
 .meta span { border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; font-size: 12px; font-weight: 600; font-stretch: 125%; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.photo.logo-panel { position: relative; background: #050505; }
+.photo.logo-panel { position: relative; background: #050505; aspect-ratio: 1 / 1; }
 .logo-panel img { position: absolute; inset: 0; margin: auto; width: 62%; height: 55%; object-fit: contain; }
 .photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; max-width: 100%; object-fit: cover; background: var(--photo); }
 @media (max-width: 760px) {
   .feature { grid-template-columns: 1fr; gap: 24px; }
-  .feature:nth-of-type(even) .photo { order: 0; }
+  .feature .photo { order: 0; }
+  .feature.izquierda .text { text-align: left; justify-items: start; }
+  .feature.izquierda .meta { justify-content: flex-start; }
   .photo { aspect-ratio: 4 / 3; }
 }
 
