@@ -11,6 +11,7 @@ export interface Evento {
   entradas: string;
   lugar: string;
   mapa: string;
+  web?: string;
 }
 
 export const club: Evento = {
@@ -65,3 +66,18 @@ export const fiestas: Evento[] = [
 ];
 
 export const eventos: Evento[] = [club, ...fiestas];
+
+// Otros proyectos de Grupo FOMO con web propia (sin página aquí).
+export const graduacions: Evento = {
+  id: 'graduacions',
+  slug: 'graduacions',
+  nombre: 'Graduacions.cat',
+  texto: 'Organizamos fiestas de graduación para estudiantes de ESO, Bachillerato y universidad en Barcelona, Girona, Lleida y Tarragona: cena, fiesta, DJ, fotografía y aftermovie.',
+  descripcion: '',
+  foto: '/img/graduacions.webp',
+  meta: ['+8 años', '+100 graduaciones', 'Cataluña'],
+  entradas: '',
+  lugar: '',
+  mapa: '',
+  web: 'https://www.graduacions.cat/',
+};

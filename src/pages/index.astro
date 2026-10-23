@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import EventoFeature from '../components/EventoFeature.astro';
 import Newsletter from '../components/Newsletter.astro';
-import { club, fiestas } from '../data/eventos';
+import { club, fiestas, graduacions } from '../data/eventos';
 ---
 <Base>
   <div class="band-dark">
@@ -40,6 +40,15 @@ import { club, fiestas } from '../data/eventos';
   <div class="band-dark bar-title">
     <h2 class="wrap">Proyectos actuales</h2>
   </div>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Graduaciones</span>
+      </div>
+      <EventoFeature evento={graduacions} />
+    </div>
+  </section>
 
   <section>
     <div class="wrap">
