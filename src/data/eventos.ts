@@ -101,6 +101,13 @@ export interface Marca {
 
 export const marcas: Marca[] = [
   {
+    id: 'music-club',
+    nombre: 'Music Club',
+    logo: '/img/logos/music-club.png',
+    meta: ['2010–2012', '+16', 'Barcelona'],
+    texto: 'Gestión de una sala con fiestas para mayores de 16 años en la calle Villarroel de Barcelona.',
+  },
+  {
     id: 'vetro',
     nombre: 'Vetro',
     logo: '/img/logos/vetro.png',
@@ -110,6 +117,7 @@ export const marcas: Marca[] = [
   {
     id: 'el-cielo',
     nombre: 'El Cielo de Up&Down',
+    logo: '/img/logos/el-cielo.png',
     meta: ['2012', '+16', 'Barcelona'],
     texto: 'Fiestas para mayores de 16 años en Up&Down Barcelona.',
   },
@@ -152,13 +160,6 @@ export const marcas: Marca[] = [
     meta: ['2018–2019', 'Barcelona'],
     texto: 'Fiestas universitarias de los jueves en Pacha Barcelona.',
     facebook: 'https://www.facebook.com/pachachabarcelona',
-  },
-  {
-    id: 'music-club',
-    nombre: 'Music Club',
-    logo: '/img/logos/music-club.png',
-    meta: ['+16', 'Barcelona'],
-    texto: 'Gestión de una sala con fiestas para mayores de 16 años en la calle Villarroel de Barcelona.',
   },
 ];
 
