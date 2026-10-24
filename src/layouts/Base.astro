@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Logo from '../components/Logo.astro';
-import { anyosExperiencia, eventos } from '../data/eventos';
+import { anyosExperiencia } from '../data/eventos';
 
 interface Props {
   title?: string;
@@ -12,6 +12,11 @@ const {
   title = 'Grupo FOMO',
   description = `GRUPO FOMO: Mirablau Club, La Rumba Barcelona, Una Noche Tonta y Una Tarde Tonta. Más de ${anyosExperiencia} años en la organización de eventos en Barcelona.`,
 } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname.replace(/(.)\/$/, '$1'), Astro.site);
+const imagen = new URL('/img/og.png', Astro.site);
+// Código de verificación de Google Search Console (método "Etiqueta HTML")
+const googleVerificacion = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 ---
 <!doctype html>
 <html lang="es">
@@ -20,6 +25,17 @@ const {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content={description}>
+<link rel="canonical" href={canonical}>
+<link rel="sitemap" href="/sitemap.xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grupo FOMO">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={canonical}>
+<meta property="og:image" content={imagen}>
+<meta name="twitter:card" content="summary_large_image">
+{googleVerificacion && <meta name="google-site-verification" content={googleVerificacion}>}
 <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +48,6 @@ const {
   <div class="wrap">
     <a class="mark" href="/" aria-label="GRUPO FOMO, inicio"><Logo /></a>
     <ul>
-      {eventos.map((e) => <li><a href={`/${e.slug}`}>{e.id === 'la-rumba' ? 'La Rumba' : e.nombre}</a></li>)}
       <li><a href="/#servicios">Eventos privados</a></li>
     </ul>
   </div>
