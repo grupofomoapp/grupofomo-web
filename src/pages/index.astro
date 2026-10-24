@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import EventoFeature from '../components/EventoFeature.astro';
 import Contacto from '../components/Contacto.astro';
 import { anyosExperiencia, club, fiestas, graduacions, marcas, padel } from '../data/eventos';
+
+const [rumba, tarde, noche] = ['la-rumba', 'tarde-tonta', 'noche-tonta'].map((id) => fiestas.find((f) => f.id === id)!);
 ---
 <Base>
   <div class="band-dark">
@@ -49,14 +51,26 @@ import { anyosExperiencia, club, fiestas, graduacions, marcas, padel } from '../
 
   <section>
     <div class="wrap">
-      <EventoFeature evento={club} izquierda etiqueta="Gestión de local" />
+      <EventoFeature evento={padel} izquierda etiqueta="Evento solidario" />
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      {fiestas.map((f, i) => <EventoFeature evento={f} izquierda={i % 2 === 1} etiqueta="Marca propia" />)}
-      <EventoFeature evento={padel} izquierda etiqueta="Evento solidario" />
+      <EventoFeature evento={tarde} etiqueta="Marca propia" />
+      <EventoFeature evento={noche} izquierda etiqueta="Marca propia" />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <EventoFeature evento={club} etiqueta="Gestión de local" />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <EventoFeature evento={rumba} izquierda etiqueta="Marca propia" />
     </div>
   </section>
 
