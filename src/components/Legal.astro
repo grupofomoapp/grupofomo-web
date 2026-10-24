@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<Base title={`${title} · Grupo FOMO`} description={description}>
+  <article class="wrap legal">
+    <a class="back" href="/">← Volver</a>
+    <h1>{title}</h1>
+    <slot />
+    <p class="actualizado">Última actualización: 24 de octubre de 2026.</p>
+  </article>
+</Base>

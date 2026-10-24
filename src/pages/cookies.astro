@@ -1,0 +1,29 @@
+---
+import Legal from '../components/Legal.astro';
+---
+<Legal title="Política de cookies" description="Qué cookies usa la web de GRUPO FOMO y cómo gestionarlas.">
+  <h2>Qué son las cookies</h2>
+  <p>Son pequeños archivos que una web guarda en tu navegador para recordar información sobre tu visita.</p>
+
+  <h2>Qué cookies usamos</h2>
+  <table>
+    <thead><tr><th>Cookie</th><th>De quién</th><th>Para qué</th><th>Duración</th></tr></thead>
+    <tbody>
+      <tr><td>cookies (almacenamiento local)</td><td>Grupo FOMO</td><td>Recordar si has aceptado o rechazado las cookies de analítica.</td><td>Hasta que borres los datos del navegador</td></tr>
+      <tr><td>_ga, _ga_*</td><td>Google Analytics</td><td>Contar visitas y saber cómo se usa la web, de forma agregada. Solo si aceptas.</td><td>2 años</td></tr>
+    </tbody>
+  </table>
+  <p>No usamos cookies de publicidad.</p>
+
+  <h2>Cómo cambiar tu elección</h2>
+  <p>Puedes volver a ver el aviso y cambiar tu elección aquí: <button class="btn" type="button" id="cambiar-cookies">Configurar cookies</button></p>
+  <p>También puedes borrar o bloquear las cookies desde la configuración de tu navegador.</p>
+
+  <script is:inline>
+    document.getElementById('cambiar-cookies')?.addEventListener('click', () => {
+      try { localStorage.removeItem('cookies'); } catch (e) {}
+      const aviso = document.getElementById('cookies');
+      if (aviso) aviso.hidden = false;
+    });
+  </script>
+</Legal>
