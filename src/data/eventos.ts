@@ -121,15 +121,19 @@ export const padel: Evento = {
   id: 'fomo-padel-fest',
   slug: 'fomo-padel-fest',
   nombre: 'FOMO Padel Fest',
-  texto: 'Torneo de pádel solidario que organizamos en colaboración con la ONG NeedÜ.',
+  texto: 'Torneo de pádel solidario en colaboración con la ONG NeedÜ, en los clubs de pádel de Sant Just y El Prat.',
   descripcion: '',
   foto: '',
   logo: '/img/logos/fomo-padel-fest.png',
-  meta: ['Desde 2025'],
+  meta: ['Desde 2025', 'Sant Just', 'El Prat'],
   entradas: '',
   lugar: '',
   mapa: '',
   info: false,
+  redes: [
+    { nombre: 'Instagram', url: 'https://www.instagram.com/fomopadelfest/' },
+    { nombre: 'Facebook', url: 'https://www.facebook.com/fomopadelfest' },
+  ],
 };
 
 // Otras marcas de Grupo FOMO (ya finalizadas): logo, años, descripción y Facebook, sin página propia.
