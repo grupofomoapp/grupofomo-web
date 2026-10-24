@@ -1,7 +1,7 @@
 html, body { margin: 0; }
 img { max-width: 100%; }
 [hidden] { display: none !important; }
-/* Layout: estructura de la tienda actual (hero, servicios, club, fiestas, newsletter) en una columna; foto y texto alternados. Colores de marca: negro 050505 y blanco fffeff. */
+/* Layout: estructura de la tienda actual (hero, servicios, club, fiestas, contacto) en una columna; foto y texto alternados. Colores de marca: negro 050505 y blanco fffeff. */
 :root {
   --bg: #050505;
   --ink: #fffeff;
@@ -103,8 +103,8 @@ section { border-top: 1px solid var(--line); padding-block: 80px; }
 /* Newsletter */
 .news { display: grid; gap: 22px; }
 .news form { display: flex; flex-wrap: wrap; gap: 10px; }
-.news input { flex: 1 1 260px; min-width: 0; padding: 13px 16px; background: transparent; color: var(--ink); border: 1.5px solid var(--line); font: inherit; }
-.news input:focus { outline: none; border-color: var(--ink); }
+.news input, .news textarea { flex: 1 1 260px; min-width: 0; width: 100%; padding: 13px 16px; background: transparent; color: var(--ink); border: 1.5px solid var(--line); font: inherit; }
+.news input:focus, .news textarea:focus { outline: none; border-color: var(--ink); }
 .news button { background: var(--ink); color: var(--bg); border: 1.5px solid var(--ink); padding: 13px 22px; font: 800 13px/1 var(--body); font-stretch: 125%; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
 .news .note { font-size: 14px; color: var(--muted); min-height: 1.6em; }
 
@@ -147,3 +147,15 @@ footer a:hover { color: var(--ink); }
 .legal .actualizado { margin-top: 48px; font-size: 13px; }
 @media (max-width: 720px) { .legal table { display: block; overflow-x: auto; } }
 .legal .btn:hover { background: var(--ink); color: var(--bg); }
+
+.contacto { display: grid !important; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; }
+.contacto label { display: grid; gap: 6px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.contacto .ancho { grid-column: 1 / -1; }
+.contacto textarea { resize: vertical; }
+.contacto .check { display: flex; align-items: flex-start; gap: 10px; font-weight: 400; font-size: 14px; }
+.contacto .check input { flex: none; width: auto; margin-top: 4px; accent-color: var(--ink); }
+.contacto .check a { color: var(--ink); }
+.contacto button { width: fit-content; }
+.contacto button:disabled { opacity: .5; cursor: wait; }
+.trampa { position: absolute; left: -9999px; }
+@media (max-width: 720px) { .contacto { grid-template-columns: 1fr; } }

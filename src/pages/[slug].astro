@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import Newsletter from '../components/Newsletter.astro';
+import Contacto from '../components/Contacto.astro';
 import { eventos, type Evento } from '../data/eventos';
 
 export function getStaticPaths() {
@@ -38,5 +38,5 @@ const { evento } = Astro.props;
     </div>
   </section>
 
-  <Newsletter />
+  <Contacto />
 </Base>

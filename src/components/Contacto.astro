@@ -1,0 +1,45 @@
+<section id="contacto">
+  <div class="wrap news">
+    <h2>Contacto</h2>
+    <p class="intro">¿Quieres organizar un evento o tienes alguna pregunta? Escríbenos y te respondemos lo antes posible.</p>
+    <form id="contacto-form" class="contacto" action="https://formsubmit.co/grupofomo@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde grupofomo.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label><span>Nombre</span><input name="nombre" required autocomplete="name"></label>
+      <label><span>Email</span><input name="email" type="email" required autocomplete="email"></label>
+      <label><span>Teléfono (opcional)</span><input name="telefono" type="tel" autocomplete="tel"></label>
+      <label class="ancho"><span>Mensaje</span><textarea name="mensaje" rows="5" required></textarea></label>
+      <label class="ancho check"><input type="checkbox" required> <span>He leído y acepto la <a href="/privacidad">política de privacidad</a>.</span></label>
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="note" id="contacto-nota" aria-live="polite"></p>
+  </div>
+</section>
+
+<script>
+  // Envío con FormSubmit (formsubmit.co): manda cada mensaje por email a grupofomo@gmail.com
+  const form = document.getElementById('contacto-form') as HTMLFormElement | null;
+  const nota = document.getElementById('contacto-nota');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const boton = form.querySelector('button');
+    if (boton) boton.disabled = true;
+    if (nota) nota.textContent = 'Enviando…';
+    try {
+      const res = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      form.reset();
+      if (nota) nota.textContent = '¡Gracias! Hemos recibido tu mensaje y te responderemos pronto.';
+    } catch {
+      if (nota) nota.textContent = 'No se ha podido enviar. Escríbenos a grupofomo@gmail.com.';
+    } finally {
+      if (boton) boton.disabled = false;
+    }
+  });
+</script>
