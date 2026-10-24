@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Logo from '../components/Logo.astro';
+import Analytics from '../components/Analytics.astro';
 import { anyosExperiencia } from '../data/eventos';
 
 interface Props {
@@ -69,5 +70,6 @@ const googleVerificacion = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     </ul>
   </div>
 </footer>
+<Analytics />
 </body>
 </html>
