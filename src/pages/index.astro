@@ -49,14 +49,19 @@ import { anyosExperiencia, club, fiestas, graduacions, marcas, padel } from '../
 
   <section>
     <div class="wrap">
-      <EventoFeature evento={club} izquierda etiqueta="Gestión de local" />
+      <EventoFeature evento={padel} izquierda etiqueta="Evento solidario" />
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      {fiestas.map((f, i) => <EventoFeature evento={f} izquierda={i % 2 === 1} etiqueta="Marca propia" />)}
-      <EventoFeature evento={padel} izquierda etiqueta="Evento solidario" />
+      <EventoFeature evento={club} etiqueta="Gestión de local" />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      {fiestas.map((f, i) => <EventoFeature evento={f} izquierda={i % 2 === 0} etiqueta="Marca propia" />)}
     </div>
   </section>
 
