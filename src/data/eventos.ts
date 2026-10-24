@@ -19,7 +19,7 @@ export interface Evento {
 }
 
 export interface Red {
-  nombre: 'Instagram' | 'Facebook' | 'TikTok';
+  nombre: string;
   url: string;
 }
 
@@ -133,6 +133,7 @@ export const padel: Evento = {
   redes: [
     { nombre: 'Instagram', url: 'https://www.instagram.com/fomopadelfest/' },
     { nombre: 'Facebook', url: 'https://www.facebook.com/fomopadelfest' },
+    { nombre: 'NeedÜ', url: 'https://need-u.org/' },
   ],
 };
 
