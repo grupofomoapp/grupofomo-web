@@ -13,6 +13,14 @@ export interface Evento {
   lugar: string;
   mapa: string;
   web?: string;
+  // Botones de redes sociales; con `info: false` se quita el botón "Info + eventos"
+  redes?: Red[];
+  info?: boolean;
+}
+
+export interface Red {
+  nombre: 'Instagram' | 'Facebook' | 'TikTok';
+  url: string;
 }
 
 export const club: Evento = {
@@ -25,6 +33,11 @@ export const club: Evento = {
   logo: '/img/logos/mirablau-club.png',
   meta: ['Barcelona'],
   entradas: 'https://www.fourvenues.com/mirablau-club',
+  info: false,
+  redes: [
+    { nombre: 'Instagram', url: 'https://www.instagram.com/mirablau_club/' },
+    { nombre: 'Facebook', url: 'https://www.facebook.com/mirablauclub' },
+  ],
   lugar: 'Mirablau',
   mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.0677574014403!2d2.1293091764409!3d41.41604779421637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4981b8e7d21db%3A0x906895d755a11f40!2sMirablau!5e0!3m2!1ses!2ses!4v1762817787585!5m2!1ses!2ses',
 };
@@ -40,6 +53,11 @@ export const fiestas: Evento[] = [
     logo: '/img/logos/la-rumba.png',
     meta: ['Desde 2022', 'Barcelona'],
     entradas: 'https://www.fourvenues.com/la-rumba-barcelona',
+    info: false,
+    redes: [
+      { nombre: 'Instagram', url: 'https://www.instagram.com/larumbabarcelona/' },
+      { nombre: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61568610029684' },
+    ],
     lugar: 'El Cuatro Barcelona',
     mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5986.166275589334!2d2.1359119510682105!3d41.39400083090339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499b8b55bda5d%3A0x587bf7230e3f72a4!2sEl%20Cuatro%20Barcelona!5e0!3m2!1ses!2ses!4v1762820180600!5m2!1ses!2ses',
   },
@@ -53,6 +71,7 @@ export const fiestas: Evento[] = [
     logo: '/img/logos/una-tarde-tonta.png',
     meta: ['Desde 2024', '+14', 'Barcelona'],
     entradas: 'https://www.fourvenues.com/una-tarde-tonta',
+    redes: [{ nombre: 'Instagram', url: 'https://www.instagram.com/unatardetonta/' }],
     lugar: 'La Fira Villarroel Barcelona',
     mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.1653564332037!2d2.145250376439959!3d41.3922151956951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a29cdc055f8b%3A0x2570c09032bc0e8a!2sLa%20Fira%20Villarroel%20Barcelona!5e0!3m2!1ses!2ses!4v1762820967303!5m2!1ses!2ses',
   },
@@ -66,6 +85,11 @@ export const fiestas: Evento[] = [
     logo: '/img/logos/una-noche-tonta.png',
     meta: ['Desde 2016', '+16', 'Barcelona', 'Cerdanya', 'Costa Brava'],
     entradas: 'https://www.fourvenues.com/una-noche-tonta',
+    info: false,
+    redes: [
+      { nombre: 'Instagram', url: 'https://www.instagram.com/unanochetonta/' },
+      { nombre: 'TikTok', url: 'https://www.tiktok.com/@unanochetonta' },
+    ],
     lugar: 'Bikini Barcelona',
     mapa: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.2708572838587!2d2.1319055895364665!3d41.389923821846416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4987ac063df73%3A0xca99954414d8c7fd!2sBikini%20Barcelona!5e0!3m2!1ses!2ses!4v1762820620222!5m2!1ses!2ses',
   },
@@ -87,6 +111,10 @@ export const graduacions: Evento = {
   lugar: '',
   mapa: '',
   web: 'https://www.graduacions.cat/',
+  redes: [
+    { nombre: 'Instagram', url: 'https://www.instagram.com/graduacions.cat/' },
+    { nombre: 'Facebook', url: 'https://www.facebook.com/graduacions.cat' },
+  ],
 };
 
 // Otras marcas de Grupo FOMO (ya finalizadas): logo, años, descripción y Facebook, sin página propia.
@@ -120,6 +148,7 @@ const listaMarcas: Marca[] = [
     logo: '/img/logos/vetro.png',
     meta: ['2012', 'Barcelona'],
     texto: 'Promoción de los eventos de la mítica sala Vetro de Barcelona.',
+    facebook: 'https://www.facebook.com/vetrobcn',
   },
   {
     id: 'el-cielo',

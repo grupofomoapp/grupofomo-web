@@ -16,8 +16,11 @@ const { evento, izquierda = false, etiqueta } = Astro.props;
     {evento.meta && <div class="meta">{evento.meta.map((m) => <span>{m}</span>)}</div>}
     <h3>{evento.nombre}</h3>
     <p>{evento.texto}</p>
-    {evento.web
-      ? <a class="btn" href={evento.web}>Visitar web</a>
-      : <a class="btn" href={`/${evento.slug}`}>Info + eventos</a>}
+    <div class="botones">
+      {evento.web
+        ? <a class="btn" href={evento.web}>Visitar web</a>
+        : evento.info !== false && <a class="btn" href={`/${evento.slug}`}>Info + eventos</a>}
+      {evento.redes?.map((r) => <a class="btn" href={r.url} target="_blank" rel="noopener">{r.nombre}</a>)}
+    </div>
   </div>
 </div>
