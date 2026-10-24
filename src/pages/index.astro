@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import EventoFeature from '../components/EventoFeature.astro';
 import Contacto from '../components/Contacto.astro';
-import { anyosExperiencia, club, fiestas, graduacions, marcas } from '../data/eventos';
+import { anyosExperiencia, club, fiestas, graduacions, marcas, padel } from '../data/eventos';
 ---
 <Base>
   <div class="band-dark">
@@ -56,6 +56,7 @@ import { anyosExperiencia, club, fiestas, graduacions, marcas } from '../data/ev
   <section>
     <div class="wrap">
       {fiestas.map((f, i) => <EventoFeature evento={f} izquierda={i % 2 === 1} etiqueta="Marca propia" />)}
+      <EventoFeature evento={padel} izquierda etiqueta="Evento solidario" />
     </div>
   </section>
 

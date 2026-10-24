@@ -19,7 +19,7 @@ export interface Evento {
 }
 
 export interface Red {
-  nombre: 'Instagram' | 'Facebook' | 'TikTok';
+  nombre: string;
   url: string;
 }
 
@@ -117,6 +117,26 @@ export const graduacions: Evento = {
   ],
 };
 
+export const padel: Evento = {
+  id: 'fomo-padel-fest',
+  slug: 'fomo-padel-fest',
+  nombre: 'FOMO Padel Fest',
+  texto: 'Torneo de pádel solidario en colaboración con la ONG NeedÜ, en los clubs de pádel de Sant Just y El Prat.',
+  descripcion: '',
+  foto: '',
+  logo: '/img/logos/fomo-padel-fest.png',
+  meta: ['Desde 2025', 'Sant Just', 'El Prat'],
+  entradas: '',
+  lugar: '',
+  mapa: '',
+  info: false,
+  redes: [
+    { nombre: 'Instagram', url: 'https://www.instagram.com/fomopadelfest/' },
+    { nombre: 'Facebook', url: 'https://www.facebook.com/fomopadelfest' },
+    { nombre: 'NeedÜ', url: 'https://need-u.org/' },
+  ],
+};
+
 // Otras marcas de Grupo FOMO (ya finalizadas): logo, años, descripción y Facebook, sin página propia.
 export interface Marca {
   id: string;
@@ -209,7 +229,7 @@ export const marcas = [...listaMarcas].sort((a, b) => {
 
 // Años de experiencia: desde el año más antiguo que aparece en las tarjetitas de la web
 // (fiestas, club, graduaciones y marcas). Se recalcula en cada publicación.
-const anyos = [...eventos, graduacions, ...marcas]
+const anyos = [...eventos, graduacions, padel, ...marcas]
   .flatMap((e) => e.meta ?? [])
   .flatMap((t) => t.match(/\b(?:19|20)\d{2}\b/g) ?? [])
   .map(Number);
