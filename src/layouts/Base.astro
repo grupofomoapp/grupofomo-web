@@ -37,7 +37,11 @@ const googleVerificacion = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 <meta property="og:image" content={imagen}>
 <meta name="twitter:card" content="summary_large_image">
 {googleVerificacion && <meta name="google-site-verification" content={googleVerificacion}>}
-<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;125,600;125,800;125,900&display=swap">
@@ -64,7 +68,7 @@ const googleVerificacion = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       <li><a href="/aviso-legal">Aviso legal</a></li>
       <li><a href="/privacidad">Privacidad</a></li>
       <li><a href="/cookies">Cookies</a></li>
-      <li><a href="mailto:grupofomo@gmail.com">Contacto</a></li>
+      <li><a href="/#contacto">Contacto</a></li>
     </ul>
   </div>
 </footer>
