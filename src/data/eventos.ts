@@ -170,12 +170,12 @@ const listaMarcas: Marca[] = [
   },
 ];
 
-// Ordenadas por fecha: primero el año de inicio y, si coincide, el de fin
-const anyosDe = (m: Marca) => (m.meta.join(' ').match(/\b(?:19|20)\d{2}\b/g) ?? ['9999']).map(Number);
+// Ordenadas de la más reciente a la más antigua: primero el año de fin y, si coincide, el de inicio
+const anyosDe = (m: Marca) => (m.meta.join(' ').match(/\b(?:19|20)\d{2}\b/g) ?? ['0']).map(Number);
 export const marcas = [...listaMarcas].sort((a, b) => {
   const [ia, fa = ia] = anyosDe(a);
   const [ib, fb = ib] = anyosDe(b);
-  return ia - ib || fa - fb;
+  return fb - fa || ib - ia;
 });
 
 // Años de experiencia: desde el año más antiguo que aparece en las tarjetitas de la web
